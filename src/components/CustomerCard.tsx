@@ -12,12 +12,16 @@ export const CustomerCard:React.FC<CustomerCardType> = ({customer}) => {
 	const [customerFood, setCustomerFood] = useState<string>("")
 	const dispatch = useDispatch()
 
+	console.log(customer)
+
 	return (
 		<div className="customer-food-card-container">
       <h5>{customer.name}</h5>
       <div className="customer-foods-container">
         <div className="customer-food">
-          
+          {customer.food.length === 0 ? null : customer.food.map((item, index) => (
+						<span key={index}>{item}</span>
+					))}
         </div>
         <div className="customer-food-input-container">
           <input

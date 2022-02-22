@@ -22,8 +22,6 @@ export default function App() {
 	const reservations = useSelector((state: RootState) => state.reservations.value)
 	const customers = useSelector((state: RootState) => state.customer.value)
 	
-	console.log(customers)
-	
   return (
      <div className="App">
       <div className="container">
